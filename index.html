@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everyday Materials, Objects, and Structures - Grade 1 Science</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Londrina+Solid:wght@400;900&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Everyday Materials, Objects & Structures - Grade 1 Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Londrina+Solid:wght@400;900&family=Poppins:wght@500;700&display=swap" rel="stylesheet"/>
     <style>
         :root {
             --brick-orange: #D97706;
@@ -13,554 +13,342 @@
             --accent-yellow: #FCD34D;
             --dark-bg: #111827;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
             color: var(--dark-bg);
-            overflow-x: hidden;
+            line-height: 1.6;
         }
-
-        .bg-animation {
-            position: fixed; width: 100%; height: 100%; overflow: hidden; z-index: -1;
-        }
-        .floating-element {
-            position: absolute;
-            animation: float 15s ease-in-out infinite;
-            opacity: 0.3;
-            font-size: 3rem;
-        }
-        .floating-element:nth-child(1) { top: 10%; left: 10%; animation-duration: 12s; }
-        .floating-element:nth-child(2) { top: 60%; left: 80%; animation-duration: 18s; animation-delay: 2s; }
-        .floating-element:nth-child(3) { top: 30%; left: 70%; animation-duration: 15s; animation-delay: 4s; }
-        .floating-element:nth-child(4) { top: 80%; left: 20%; animation-duration: 20s; animation-delay: 1s; }
-        .floating-element:nth-child(5) { top: 50%; left: 50%; animation-duration: 16s; animation-delay: 3s; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-30px) rotate(5deg); }
-            50% { transform: translateY(-15px) rotate(-5deg); }
-            75% { transform: translateY(-25px) rotate(3deg); }
-        }
-        
         header {
-            background: linear-gradient(135deg, var(--brick-orange) 0%, var(--wood-brown) 50%, var(--steel-gray) 100%);
-            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--brick-orange), var(--wood-brown), var(--steel-gray));
+            color: white;
             text-align: center;
-            position: relative;
-            box-shadow: 0 12px 50px rgba(0,0,0,0.25);
-            overflow: hidden;
+            padding: 3rem 1rem;
         }
-        header::before {
-            content: '🧱';
-            position: absolute;
-            font-size: 12rem;
-            opacity: 0.1;
-            top: -30px;
-            left: 3%;
-            animation: float-element 4s ease-in-out infinite;
-        }
-        header::after {
-            content: '🔨';
-            position: absolute;
-            font-size: 12rem;
-            opacity: 0.1;
-            top: -30px;
-            right: 3%;
-            animation: float-element 4s ease-in-out infinite 2s;
-        }
-        @keyframes float-element {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-25px) rotate(10deg); }
-        }
-        
-        h1 {
-            font-family: 'Bungee', cursive;
-            font-size: 4.5rem;
-            color: white;
-            text-shadow: 5px 5px 0 var(--dark-bg), 10px 10px 0 rgba(0,0,0,0.3);
-            margin-bottom: 1rem;
-            animation: gentle-shake 3s ease-in-out infinite;
-            letter-spacing: 3px;
-        }
-        @keyframes gentle-shake {
-            0%, 100% { transform: rotate(-0.5deg); }
-            50% { transform: rotate(0.5deg); }
-        }
-        
-        .subtitle {
-            font-family: 'Londrina Solid', cursive;
-            font-size: 2.5rem;
-            color: white;
-            text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
-            font-weight: 900;
-        }
-        
+        h1 { font-family: 'Bungee', cursive; font-size: 3.8rem; margin:0; text-shadow: 3px 3px 0 #000; }
+        .subtitle { font-family: 'Londrina Solid', cursive; font-size: 2.2rem; }
         nav {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(15px);
-            padding: 1.5rem;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            background: white;
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 6px solid var(--brick-orange);
-            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        nav.hidden { display: none; }
-        
         .nav-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.2rem;
-            max-width: 1600px;
+            gap: 1rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        
         .nav-btn {
-            background: linear-gradient(135deg, var(--brick-orange), var(--wood-brown));
+            background: var(--brick-orange);
             color: white;
             border: none;
-            padding: 1.3rem 1rem;
-            border-radius: 18px;
+            padding: 1rem;
+            border-radius: 12px;
             font-family: 'Londrina Solid', cursive;
-            font-size: 1rem;
-            font-weight: 900;
+            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 6px 0 rgba(0,0,0,0.25);
-            text-transform: uppercase;
-            position: relative;
-            overflow: hidden;
         }
-        .nav-btn::before {
-            content: '⚡';
-            position: absolute;
-            left: -30px;
-            font-size: 1.5rem;
-            transition: left 0.3s;
-        }
-        .nav-btn:hover::before {
-            left: 10px;
-        }
-        .nav-btn:hover {
-            transform: translateY(-6px) scale(1.05);
-            box-shadow: 0 12px 0 rgba(0,0,0,0.25);
-        }
-        .nav-btn:active {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 0 rgba(0,0,0,0.25);
-        }
-        .nav-btn.active {
-            background: linear-gradient(135deg, var(--accent-yellow), var(--steel-gray));
-            animation: pulse-btn 1.5s infinite;
-        }
-        
+        .nav-btn:hover { background: var(--wood-brown); transform: translateY(-3px); }
+        .nav-btn.active { background: var(--accent-yellow); color: #111; }
         .back-button {
             display: none;
             position: fixed;
-            top: 25px;
-            left: 25px;
-            z-index: 101;
-            background: linear-gradient(135deg, var(--brick-orange), var(--wood-brown));
+            top: 20px;
+            left: 20px;
+            z-index: 200;
+            background: var(--brick-orange);
             color: white;
             border: none;
-            padding: 1.2rem 2.5rem;
-            border-radius: 18px;
-            font-family: 'Londrina Solid', cursive;
-            font-size: 1.3rem;
-            font-weight: 900;
-            cursor: pointer;
-            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.5);
-            transition: all 0.3s;
-        }
-        .back-button.show {
-            display: block;
-            animation: slideInLeft 0.6s;
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-60px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-        
-        .page {
-            display: none;
-            animation: fadeInUp 0.7s;
-        }
-        .page.active { display: block; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .card {
-            background: white;
-            border-radius: 35px;
-            padding: 3.5rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-            border: 7px solid;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card h2 {
-            font-family: 'Bungee', cursive;
-            font-size: 3.2rem;
-            margin-bottom: 1.8rem;
-            color: var(--brick-orange);
-            text-shadow: 4px 4px 0 var(--accent-yellow);
-        }
-        .card h3 {
-            font-family: 'Londrina Solid', cursive;
-            font-size: 2.5rem;
-            margin: 2.5rem 0 1.8rem;
-            color: var(--wood-brown);
-            font-weight: 900;
-        }
-        .card p, .card li {
-            font-size: 1.35rem;
-            line-height: 1.9;
-            margin-bottom: 1.2rem;
-        }
-        
-        .clickable-audio {
-            cursor: pointer;
-            position: relative;
-            transition: all 0.3s;
-            padding: 0.6rem;
+            padding: 0.8rem 1.6rem;
             border-radius: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-        .clickable-audio:hover {
-            background: rgba(217, 119, 6, 0.15);
-            transform: translateX(6px);
-        }
-        .clickable-audio::before {
-            content: '🔊';
-            position: absolute;
-            left: -35px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .clickable-audio:hover::before {
-            opacity: 0.7;
-        }
-        .clickable-audio.speaking {
-            background: rgba(217, 119, 6, 0.25);
-            animation: pulse-speak 1s infinite;
-        }
-        @keyframes pulse-speak {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        .example-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .example-card {
+        .back-button.show { display: block; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .page { display: none; }
+        .page.active { display: block; animation: fadeIn 0.6s; }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        .card {
             background: white;
             border-radius: 20px;
             padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 6px solid var(--brick-orange);
+        }
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .example-card {
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 1.5rem;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            border: 5px solid;
-            transition: all 0.4s;
-            cursor: pointer;
-        }
-        .example-card:hover {
-            transform: translateY(-15px) rotate(-3deg);
-        }
-        .icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            animation: bounce-icon 2s ease-in-out infinite;
-        }
-        @keyframes bounce-icon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        .quiz-container {
-            background: linear-gradient(135deg, #FFF5E1 0%, #FFE4B5 100%);
-            border-radius: 25px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            border: 5px solid var(--accent-yellow);
-        }
-        .question {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 18px;
-            border-left: 6px solid var(--brick-orange);
-        }
-        .question-text {
-            font-family: 'Londrina Solid', cursive;
-            font-size: 1.6rem;
-            color: var(--dark-bg);
-            margin-bottom: 1.2rem;
-            font-weight: 900;
-        }
-        .option {
-            padding: 1.2rem;
-            background: #F7FAFC;
             border: 4px solid var(--steel-gray);
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s;
         }
-        .option:hover {
-            background: #E6F7FF;
-            transform: translateX(8px);
-        }
-        .option.selected {
-            background: #D4EDFF;
-            border-color: var(--wood-brown);
-            border-width: 5px;
-        }
-        .option.correct {
-            background: #C6F6D5;
-            border-color: #10B981;
-        }
-        .option.incorrect {
-            background: #FED7D7;
-            border-color: #E53E3E;
-        }
-        .quiz-button {
-            background: linear-gradient(135deg, #10B981, var(--steel-gray));
-            color: white;
-            border: none;
-            padding: 1.3rem 3rem;
-            border-radius: 15px;
-            font-family: 'Londrina Solid', cursive;
-            font-size: 1.4rem;
-            font-weight: 900;
-            cursor: pointer;
-        }
-        
-        .drag-drop-container {
-            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
-            border-radius: 25px;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            border: 5px solid #10B981;
-        }
-        .drag-items-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 18px;
-            margin-bottom: 2rem;
-            min-height: 120px;
-            border: 4px dashed var(--steel-gray);
-        }
-        .drag-item {
-            padding: 1rem 1.8rem;
-            background: linear-gradient(135deg, #FFF, #F0F4F8);
-            border: 4px solid var(--steel-gray);
-            border-radius: 15px;
-            cursor: grab;
-            font-weight: 700;
-        }
-        .drop-zone {
-            min-height: 150px;
-            padding: 1.5rem;
-            background: white;
-            border: 4px dashed var(--wood-brown);
-            border-radius: 18px;
-        }
-        .drop-zone.drag-over {
-            background: #F0E5FF;
-            border-color: var(--brick-orange);
-            border-style: solid;
-        }
+        .icon { font-size: 4.5rem; margin-bottom: 0.5rem; }
+        .clickable-audio { cursor: pointer; padding: 0.3rem; border-radius: 8px; }
+        .clickable-audio:hover { background: rgba(217,119,6,0.1); }
+        .clickable-audio.speaking { background: rgba(217,119,6,0.3); animation: pulse 1.2s infinite; }
+        @keyframes pulse { 0%,100% {opacity:1} 50% {opacity:0.7} }
     </style>
 </head>
 <body>
 
-    <div class="bg-animation">
-        <div class="floating-element">🧱</div>
-        <div class="floating-element">🔨</div>
-        <div class="floating-element">🏠</div>
-        <div class="floating-element">🪛</div>
-        <div class="floating-element">🪚</div>
+<header>
+    <h1>Materials & Structures!</h1>
+    <p class="subtitle">🧱 Everyday Objects & Buildings 🏠</p>
+</header>
+
+<nav id="main-nav">
+    <div class="nav-grid">
+        <button class="nav-btn" onclick="showPage('d11')">D1.1 Minimizing Waste</button>
+        <button class="nav-btn" onclick="showPage('d12')">D1.2 Assessing Objects</button>
+        <button class="nav-btn" onclick="showPage('d21')">D2.1 Objects & Materials</button>
+        <button class="nav-btn" onclick="showPage('d22')">D2.2 Structures & Loads</button>
+        <button class="nav-btn" onclick="showPage('d23')">D2.3 Materials in Objects</button>
+        <button class="nav-btn" onclick="showPage('d24')">D2.4 Characteristics</button>
+        <button class="nav-btn" onclick="showPage('d25')">D2.5 Purposes</button>
+        <button class="nav-btn" onclick="showPage('d26')">D2.6 Properties</button>
+        <button class="nav-btn" onclick="showPage('d27')">D2.7 Fasteners</button>
+        <button class="nav-btn" onclick="showPage('d28')">D2.8 Sources</button>
+    </div>
+</nav>
+
+<button class="back-button" id="back-btn" onclick="showHome()">⬅ Back Home</button>
+
+<div class="container">
+
+    <!-- D1.1 -->
+    <div id="d11" class="page">
+        <div class="card">
+            <h2>♻️ D1.1 Minimizing Waste</h2>
+            <p class="clickable-audio">We make waste every day. We can reduce, reuse, recycle, and compost to help keep our Earth clean!</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">📄</span><h4>Paper</h4><p>Drawings & notes</p></div>
+                <div class="example-card"><span class="icon">🛍️</span><h4>Plastic</h4><p>Bags & bottles</p></div>
+                <div class="example-card"><span class="icon">🍎</span><h4>Food</h4><p>Apple cores</p></div>
+                <div class="example-card"><span class="icon">👕</span><h4>Clothes</h4><p>Too small shirts</p></div>
+            </div>
+            <p class="clickable-audio">Full activity coming soon...</p>
+        </div>
     </div>
 
-    <header>
-        <h1>Materials & Structures!</h1>
-        <p class="subtitle">🧱 Everyday Objects! 🔨</p>
-    </header>
-
-    <nav id="main-nav">
-        <div class="nav-grid">
-            <button class="nav-btn" onclick="showPage('d11')">D1.1 Minimizing Waste</button>
-            <button class="nav-btn" onclick="showPage('d12')">D1.2 Assessing Objects</button>
-            <button class="nav-btn" onclick="showPage('d21')">D2.1 Objects & Materials</button>
-            <button class="nav-btn" onclick="showPage('d22')">D2.2 Structures & Loads</button>
-            <button class="nav-btn" onclick="showPage('d23')">D2.3 Materials in Objects</button>
-            <button class="nav-btn" onclick="showPage('d24')">D2.4 Characteristics</button>
-            <button class="nav-btn" onclick="showPage('d25')">D2.5 Purposes</button>
-            <button class="nav-btn" onclick="showPage('d26')">D2.6 Material Properties</button>
-            <button class="nav-btn" onclick="showPage('d27')">D2.7 Fasteners</button>
-            <button class="nav-btn" onclick="showPage('d28')">D2.8 Sources of Materials</button>
-        </div>
-    </nav>
-
-    <button class="back-button" id="back-btn" onclick="showHome()">⬅ Back Home</button>
-
-    <div class="container">
-
-        <!-- D1.1 -->
-        <div id="d11" class="page">
-            <div class="card" data-section="d11">
-                <h2>♻️ D1.1: Minimizing Waste</h2>
-                <p class="clickable-audio">People make waste every day. Waste is stuff we throw away. We can make less waste at school or home. This helps our Earth stay clean!</p>
-                
-                <h3>Kinds of Waste We Make</h3>
-                <div class="example-grid">
-                    <div class="example-card"><div class="icon">📄</div><h4>Paper</h4><p>Old drawings</p></div>
-                    <div class="example-card"><div class="icon">🛍️</div><h4>Plastic</h4><p>Bags & bottles</p></div>
-                    <div class="example-card"><div class="icon">🍎</div><h4>Food</h4><p>Apple cores</p></div>
-                    <div class="example-card"><div class="icon">👕</div><h4>Clothes</h4><p>Too small shirts</p></div>
-                </div>
-
-                <h3>Ways to Make Less Waste</h3>
-                <p class="clickable-audio"><strong>Reduce</strong> — use less<br><strong>Reuse</strong> — use again<br><strong>Recycle</strong> — make new<br><strong>Compost</strong> — food to soil</p>
-
-                <!-- Quiz and drag-drop code here (same as your original) -->
+    <!-- D1.2 -->
+    <div id="d12" class="page">
+        <div class="card">
+            <h2>🔍 D1.2 Assessing Everyday Objects</h2>
+            <p class="clickable-audio">Some objects do the same job but are made from different materials. We look at where materials come from and what happens when they are old.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🥤</span><h4>Plastic bottle</h4><p>From oil – recycle or trash</p></div>
+                <div class="example-card"><span class="icon">🫖</span><h4>Metal bottle</h4><p>From rocks – recycle many times</p></div>
+                <div class="example-card"><span class="icon">📚</span><h4>Paper book</h4><p>From trees – recycle</p></div>
+                <div class="example-card"><span class="icon">🪑</span><h4>Chair</h4><p>Wood or plastic</p></div>
             </div>
         </div>
-
-        <!-- D1.2 -->
-        <div id="d12" class="page">
-            <div class="card" data-section="d12">
-                <h2>🔍 D1.2: Assessing Everyday Objects</h2>
-                <p class="clickable-audio">Many objects do the same job but are made from different materials. Some materials come from nature. Some come from factories. When objects are old or broken, we can recycle some or throw them away. We look at what is best for people and Earth!</p>
-                
-                <h3>Comparing Objects with the Same Purpose</h3>
-                <div class="example-grid">
-                    <div class="example-card"><div class="icon">🥤</div><h4>Plastic Bottle</h4><p>From oil – recycle or landfill</p></div>
-                    <div class="example-card"><div class="icon">🫖</div><h4>Metal Bottle</h4><p>From rocks – recycle many times</p></div>
-                    <div class="example-card"><div class="icon">📚</div><h4>Paper Book</h4><p>From trees – recycle to new paper</p></div>
-                    <div class="example-card"><div class="icon">🪑</div><h4>Wood vs Plastic Chair</h4><p>Wood from trees, plastic from oil</p></div>
-                </div>
-
-                <!-- Quiz -->
-                <div class="quiz-container" id="d12-quiz">
-                    <h3>Quiz Time!</h3>
-                    <div class="question" data-question="0">
-                        <div class="question-text">1. What is a plastic bottle made from?</div>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this,0)">Wood</div>
-                            <div class="option" onclick="selectOption(this,1)">Plastic from oil</div>
-                            <div class="option" onclick="selectOption(this,2)">Paper</div>
-                            <div class="option" onclick="selectOption(this,3)">Metal</div>
-                        </div>
-                        <div class="feedback" id="d12-q0-feedback"></div>
-                    </div>
-                    <!-- ... add the other 4 questions as in previous message ... -->
-                    <button class="quiz-button" onclick="checkQuiz('d12')">✓ Check</button>
-                </div>
-
-                <!-- Drag & Drop -->
-                <div class="drag-drop-container">
-                    <h3>Drag & Drop: Where does it come from?</h3>
-                    <!-- items and zones as in previous message -->
-                </div>
-            </div>
-        </div>
-
-        <!-- D2.1 -->
-        <div id="d21" class="page">
-            <div class="card" data-section="d21">
-                <h2>🧩 D2.1: Objects & Materials</h2>
-                <p class="clickable-audio">An object is something we can touch and use. Some objects are made from only one material. Some are made from two or more materials working together!</p>
-                
-                <div class="example-grid">
-                    <div class="example-card"><div class="icon">🥄</div><h4>Spoon</h4><p>Only metal</p></div>
-                    <div class="example-card"><div class="icon">✏️</div><h4>Pencil</h4><p>Wood + graphite</p></div>
-                    <div class="example-card"><div class="icon">🧦</div><h4>Sock</h4><p>Only fabric</p></div>
-                    <div class="example-card"><div class="icon">🚲</div><h4>Bike</h4><p>Metal + rubber + plastic</p></div>
-                </div>
-
-                <!-- Quiz and drag-drop as in previous message -->
-            </div>
-        </div>
-
-        <!-- D2.2 -->
-        <div id="d22" class="page">
-            <div class="card" data-section="d22">
-                <h2>🏗️ D2.2: Structures & Loads</h2>
-                <p class="clickable-audio">A structure is an object that holds something up. It supports a load. The load can be you sitting, books on a shelf, or even the structure holding itself up!</p>
-                
-                <div class="example-grid">
-                    <div class="example-card"><div class="icon">🪑</div><h4>Chair</h4><p>Holds you</p></div>
-                    <div class="example-card"><div class="icon">📚</div><h4>Bookshelf</h4><p>Holds books</p></div>
-                    <div class="example-card"><div class="icon">🛏️</div><h4>Bed frame</h4><p>Holds you + mattress</p></div>
-                    <div class="example-card"><div class="icon">🪜</div><h4>Ladder</h4><p>Holds people climbing</p></div>
-                </div>
-
-                <!-- Quiz and drag-drop as in previous message -->
-            </div>
-        </div>
-
-        <!-- D2.3 -->
-        <div id="d23" class="page">
-            <div class="card" data-section="d23">
-                <h2>🛠️ D2.3: Materials Used in Everyday Objects</h2>
-                <p class="clickable-audio">Different objects are made from different materials. We use wood, plastic, metal, fabric, paper, glass and more to make things we use every day.</p>
-                
-                <div class="example-grid">
-                    <div class="example-card"><div class="icon">🪑</div><h4>Chair</h4><p>Wood or plastic</p></div>
-                    <div class="example-card"><div class="icon">🥤</div><h4>Water bottle</h4><p>Plastic or metal</p></div>
-                    <div class="example-card"><div class="icon">👕</div><h4>Shirt</h4><p>Fabric (cotton or polyester)</p></div>
-                    <div class="example-card"><div class="icon">📱</div><h4>Phone case</h4><p>Plastic or silicone</p></div>
-                </div>
-
-                <!-- Quiz -->
-                <div class="quiz-container" id="d23-quiz">
-                    <h3>Quiz Time!</h3>
-                    <div class="question" data-question="0">
-                        <div class="question-text">1. What material is often used for chairs?</div>
-                        <div class="options">
-                            <div class="option" onclick="selectOption(this,0)">Paper</div>
-                            <div class="option" onclick="selectOption(this,1)">Wood or plastic</div>
-                            <div class="option" onclick="selectOption(this,2)">Glass</div>
-                            <div class="option" onclick="selectOption(this,3)">Food</div>
-                        </div>
-                        <div class="feedback" id="d23-q0-feedback"></div>
-                    </div>
-                    <!-- Add 4 more questions similarly -->
-                </div>
-
-                <!-- Drag & Drop: match object to main material -->
-            </div>
-        </div>
-
-        <!-- D2.4 to D2.8 follow similar structure – shortened here for response length -->
-
     </div>
 
-    <script>
-        // Page navigation, speech synthesis, quiz logic, drag & drop – same as your original file
-        // Add quizData entries for all 10 units
-        const quizData = {
-            d11: [/* your original */],
-            d12: [{correct:1}, {correct:1}, {correct:1}, {correct:1}, {correct:1}],
-            d21: [{correct:1}, {correct:1}, {correct:1}, {correct:1}, {correct:0}],
-            d22: [{correct:1}, {correct:1}, {correct:1}, {correct:1}, {correct:1}],
-            // ... continue for d23-d28
-        };
-    </script>
+    <!-- D2.1 -->
+    <div id="d21" class="page">
+        <div class="card">
+            <h2>🧩 D2.1 Objects Are Made of Materials</h2>
+            <p class="clickable-audio">Objects are things we use. Some are made from one material. Some are made from many materials together.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🥄</span><h4>Spoon</h4><p>Only metal</p></div>
+                <div class="example-card"><span class="icon">✏️</span><h4>Pencil</h4><p>Wood + graphite</p></div>
+                <div class="example-card"><span class="icon">🧦</span><h4>Sock</h4><p>Only fabric</p></div>
+                <div class="example-card"><span class="icon">🚲</span><h4>Bike</h4><p>Metal + rubber + plastic</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.2 -->
+    <div id="d22" class="page">
+        <div class="card">
+            <h2>🏗️ D2.2 Structures Support Loads</h2>
+            <p class="clickable-audio">A structure holds things up. It supports a load — like you on a chair or books on a shelf.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🪑</span><h4>Chair</h4><p>Holds you</p></div>
+                <div class="example-card"><span class="icon">📚</span><h4>Bookshelf</h4><p>Holds books</p></div>
+                <div class="example-card"><span class="icon">🛏️</span><h4>Bed</h4><p>Holds you + blankets</p></div>
+                <div class="example-card"><span class="icon">🪜</span><h4>Ladder</h4><p>Holds people</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.3 -->
+    <div id="d23" class="page">
+        <div class="card">
+            <h2>🛠️ D2.3 Materials in Everyday Objects</h2>
+            <p class="clickable-audio">We use many materials to make things: wood, plastic, metal, fabric, paper, glass and more.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🪑</span><h4>Chair</h4><p>Wood or plastic</p></div>
+                <div class="example-card"><span class="icon">🥤</span><h4>Bottle</h4><p>Plastic or metal</p></div>
+                <div class="example-card"><span class="icon">👕</span><h4>Shirt</h4><p>Fabric</p></div>
+                <div class="example-card"><span class="icon">📱</span><h4>Phone case</h4><p>Plastic</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.4 -->
+    <div id="d24" class="page">
+        <div class="card">
+            <h2>👀 D2.4 Characteristics of Objects</h2>
+            <p class="clickable-audio">We can look, touch, and feel objects. We describe them: hard, soft, shiny, rough, heavy, light, smooth, bumpy.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🪨</span><h4>Rock</h4><p>Hard, rough, heavy</p></div>
+                <div class="example-card"><span class="icon">🧸</span><h4>Teddy bear</h4><p>Soft, fuzzy</p></div>
+                <div class="example-card"><span class="icon">🥄</span><h4>Spoon</h4><p>Shiny, smooth, hard</p></div>
+                <div class="example-card"><span class="icon">📄</span><h4>Paper</h4><p>Light, thin, bendy</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.5 -->
+    <div id="d25" class="page">
+        <div class="card">
+            <h2>🎯 D2.5 Purposes of Objects</h2>
+            <p class="clickable-audio">Every object has a job! We use things to eat with, sit on, carry stuff, play, keep warm, and more.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🥄</span><h4>Spoon</h4><p>To eat soup</p></div>
+                <div class="example-card"><span class="icon">🪑</span><h4>Chair</h4><p>To sit on</p></div>
+                <div class="example-card"><span class="icon">🎒</span><h4>Backpack</h4><p>To carry books</p></div>
+                <div class="example-card"><span class="icon">🧣</span><h4>Scarf</h4><p>To keep neck warm</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.6 -->
+    <div id="d26" class="page">
+        <div class="card">
+            <h2>💪 D2.6 Properties of Materials</h2>
+            <p class="clickable-audio">Materials have properties that make them good for certain jobs: strong, flexible, waterproof, stretchy, hard, soft.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🪨</span><h4>Metal</h4><p>Strong & hard</p></div>
+                <div class="example-card"><span class="icon">🧶</span><h4>Fabric</h4><p>Soft & stretchy</p></div>
+                <div class="example-card"><span class="icon">🪵</span><h4>Wood</h4><p>Strong & stiff</p></div>
+                <div class="example-card"><span class="icon">🥤</span><h4>Plastic</h4><p>Waterproof & light</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.7 -->
+    <div id="d27" class="page">
+        <div class="card">
+            <h2>🔩 D2.7 Fasteners</h2>
+            <p class="clickable-audio">Fasteners hold things together. We use glue, tape, screws, nails, buttons, zippers, Velcro, and staples.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🔨</span><h4>Nails</h4><p>Hammer into wood</p></div>
+                <div class="example-card"><span class="icon">🧷</span><h4>Buttons</h4><p>On shirts</p></div>
+                <div class="example-card"><span class="icon">📎</span><h4>Paper clips</h4><p>Hold papers</p></div>
+                <div class="example-card"><span class="icon">🧲</span><h4>Velcro</h4><p>Sticks and pulls apart</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D2.8 -->
+    <div id="d28" class="page">
+        <div class="card">
+            <h2>🌳 D2.8 Sources of Materials</h2>
+            <p class="clickable-audio">Many materials come from nature: wood from trees, cotton from plants, metal from rocks, plastic from oil.</p>
+            <div class="example-grid">
+                <div class="example-card"><span class="icon">🌲</span><h4>Wood</h4><p>From trees</p></div>
+                <div class="example-card"><span class="icon">🌾</span><h4>Cotton fabric</h4><p>From cotton plants</p></div>
+                <div class="example-card"><span class="icon">🪨</span><h4>Metal</h4><p>From rocks in Earth</p></div>
+                <div class="example-card"><span class="icon">🛢️</span><h4>Plastic</h4><p>From oil</p></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JavaScript - MUST be at the bottom -->
+<script>
+    // 1. Page Navigation
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(p => {
+            p.classList.remove('active');
+        });
+        // Show the selected page
+        const page = document.getElementById(pageId);
+        if (page) {
+            page.classList.add('active');
+        }
+        // Hide nav, show back button
+        document.getElementById('main-nav').style.display = 'none';
+        document.getElementById('back-btn').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showHome() {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(p => {
+            p.classList.remove('active');
+        });
+        // Show nav, hide back button
+        document.getElementById('main-nav').style.display = 'block';
+        document.getElementById('back-btn').classList.remove('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Click-to-Speak (works on any element with class="clickable-audio")
+    let currentUtterance = null;
+    document.querySelectorAll('.clickable-audio').forEach(el => {
+        el.addEventListener('click', function() {
+            if (currentUtterance) {
+                window.speechSynthesis.cancel();
+            }
+            const text = this.textContent.trim();
+            currentUtterance = new SpeechSynthesisUtterance(text);
+            currentUtterance.rate = 0.9;
+            currentUtterance.pitch = 1.1;
+            this.classList.add('speaking');
+            currentUtterance.onend = () => this.classList.remove('speaking');
+            window.speechSynthesis.speak(currentUtterance);
+        });
+    });
+
+    // 3. Basic Quiz Placeholder (you can expand later)
+    function checkQuiz(unitId) {
+        alert(`Quiz for ${unitId} checked! (Add full logic here)`);
+    }
+
+    // 4. Drag-and-Drop Placeholder Setup
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.drag-item').forEach(item => {
+            item.addEventListener('dragstart', e => {
+                e.dataTransfer.setData('text/plain', item.textContent.trim());
+            });
+        });
+
+        document.querySelectorAll('.drop-zone').forEach(zone => {
+            zone.addEventListener('dragover', e => {
+                e.preventDefault();
+                zone.classList.add('drag-over');
+            });
+            zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+            zone.addEventListener('drop', e => {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                const data = e.dataTransfer.getData('text/plain');
+                const dragged = Array.from(document.querySelectorAll('.drag-item')).find(el => el.textContent.trim() === data);
+                if (dragged) zone.appendChild(dragged);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
