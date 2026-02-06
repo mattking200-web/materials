@@ -291,6 +291,7 @@
         </div>
 
         <!-- UNIT 1: D1.1 -->
+        <!-- UNIT 1: D1.1 -->
         <div id="unit1" class="unit active">
             <div class="unit-header">
                 <h2>🏗️ Unit D1.1: Reducing Waste</h2>
@@ -426,7 +427,266 @@
             </div>
         </div>
 
-        <!-- Placeholder message for other units -->
+        <!-- UNIT 2: D1.2 -->
+        <div id="unit2" class="unit">
+            <div class="unit-header">
+                <h2>♻️ Unit D1.2: Materials & Recycling</h2>
+                <p class="subtitle">What Happens to Old Objects?</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'Objects Made From Materials')">Objects Made From Materials</span></h3>
+                
+                <div class="section">
+                    <p><span class="readable" onclick="speakText(this, 'Every object around us is made from materials. Different objects can be made from the same materials, but serve different purposes!')">Every object around us is made from materials. Different objects can be made from the same materials, but serve different purposes!</span></p>
+                </div>
+
+                <div class="section">
+                    <h4><span class="readable" onclick="speakText(this, 'Where Do Materials Come From?')">Where Do Materials Come From?</span></h4>
+                    <ul>
+                        <li><span class="readable" onclick="speakText(this, 'Wood comes from trees in forests')"><strong>Wood:</strong> Comes from trees in forests 🌲</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Metal comes from rocks and minerals in the ground')"><strong>Metal:</strong> Comes from rocks and minerals in the ground ⛰️</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Plastic comes from oil deep underground')"><strong>Plastic:</strong> Comes from oil deep underground 🛢️</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Glass comes from sand')"><strong>Glass:</strong> Comes from sand 🏖️</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Cotton comes from cotton plants')"><strong>Cotton:</strong> Comes from cotton plants 🌿</span></li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h4><span class="readable" onclick="speakText(this, 'What Happens When Objects Get Old?')">What Happens When Objects Get Old?</span></h4>
+                    
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Recycle It')">♻️ Recycle It</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Paper, cardboard, plastic bottles, metal cans get melted or broken down and made into new objects!')">Paper, cardboard, plastic bottles, metal cans → Get melted or broken down → Made into NEW objects!</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Donate or Reuse It')">🎁 Donate or Reuse It</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Old clothes, toys, furniture are given to someone else who needs them so they get more use!')">Old clothes, toys, furniture → Given to someone else who needs them → They get more use!</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Compost It')">🌱 Compost It</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Food scraps, leaves, paper break down in soil and become dirt to help plants grow!')">Food scraps, leaves, paper → Break down in soil → Become dirt to help plants grow!</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'Activity: Match the Material!')">🎯 Activity: Match the Material!</span></h3>
+                <div class="activity-container">
+                    <h4 class="activity-title"><span class="readable" onclick="speakText(this, 'Drag each object to its material source!')">Drag each object to its material source!</span></h4>
+                    <p class="drag-instructions"><span class="readable" onclick="speakText(this, 'Match the objects to where their materials come from.')">Match the objects to where their materials come from.</span></p>
+
+                    <div class="drag-items" id="unit2-items">
+                        <div class="drag-item" draggable="true" data-category="trees">🪑 Wooden Chair</div>
+                        <div class="drag-item" draggable="true" data-category="sand">🪟 Glass Window</div>
+                        <div class="drag-item" draggable="true" data-category="oil">🥤 Plastic Bottle</div>
+                        <div class="drag-item" draggable="true" data-category="ground">🔧 Metal Tool</div>
+                        <div class="drag-item" draggable="true" data-category="trees">📄 Paper</div>
+                        <div class="drag-item" draggable="true" data-category="ground">🥫 Aluminum Can</div>
+                    </div>
+
+                    <div class="drop-zones">
+                        <div class="drop-zone" data-zone="trees"><h5>🌲 From Trees</h5></div>
+                        <div class="drop-zone" data-zone="sand"><h5>🏖️ From Sand</h5></div>
+                        <div class="drop-zone" data-zone="oil"><h5>🛢️ From Oil</h5></div>
+                        <div class="drop-zone" data-zone="ground"><h5>⛰️ From Ground/Rocks</h5></div>
+                    </div>
+
+                    <button class="check-btn" onclick="checkActivity('unit2')">Check Answers!</button>
+                    <div class="feedback" id="unit2-feedback"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'Quiz Time!')">📝 Quiz Time!</span></h3>
+                <div class="quiz-container" id="unit2-quiz">
+                    <div class="question" data-answer="1">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 1: Where does wood come from?')">1. Where does wood come from?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'A: Sand')"><span class="readable">A) Sand</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'B: Trees')"><span class="readable">B) Trees</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'C: Oil')"><span class="readable">C) Oil</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="2">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 2: What happens when we recycle paper?')">2. What happens when we recycle paper?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'A: It goes in the garbage')"><span class="readable">A) It goes in the garbage</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'B: It stays the same')"><span class="readable">B) It stays the same</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'C: It gets made into new paper')"><span class="readable">C) It gets made into new paper</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="0">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 3: Which material comes from sand?')">3. Which material comes from sand?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'A: Glass')"><span class="readable">A) Glass</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'B: Plastic')"><span class="readable">B) Plastic</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'C: Wood')"><span class="readable">C) Wood</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="1">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 4: What should you do with old toys you do not play with?')">4. What should you do with old toys?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'A: Throw them in garbage')"><span class="readable">A) Throw them in garbage</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'B: Donate them to others')"><span class="readable">B) Donate them to others</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'C: Hide them in your room')"><span class="readable">C) Hide them in your room</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="2">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 5: Food scraps can be turned into what?')">5. Food scraps can be turned into:</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'A: Plastic')"><span class="readable">A) Plastic</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'B: Metal')"><span class="readable">B) Metal</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit2'); speakText(this, 'C: Soil or compost')"><span class="readable">C) Soil (compost)</span></div>
+                        </div>
+                    </div>
+                    <button class="submit-quiz-btn" onclick="submitQuiz('unit2')">Submit Quiz</button>
+                    <div class="quiz-results" id="unit2-results"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UNIT 3: D2.1 -->
+        <div id="unit3" class="unit">
+            <div class="unit-header">
+                <h2>🎨 Unit D2.1: What Are Objects?</h2>
+                <p class="subtitle">Things Made From Materials</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'What is an Object?')">What is an Object?</span></h3>
+                
+                <div class="section">
+                    <p><span class="readable" onclick="speakText(this, 'An object is a thing that we can see and touch. Objects are made of one or more materials. Some objects are made from just one material, while others are made from many different materials!')">An object is a thing that we can see and touch. Objects are made of <strong>one or more materials</strong>. Some objects are made from just one material, while others are made from many different materials!</span></p>
+                </div>
+
+                <div class="section">
+                    <h4><span class="readable" onclick="speakText(this, 'Objects Made From ONE Material')">Objects Made From ONE Material</span></h4>
+                    
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Wooden Spoon')">🪵 Wooden Spoon</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from wood only')">Made from: <strong>WOOD</strong> only</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Ice Cube')">🧊 Ice Cube</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from water only, frozen')">Made from: <strong>WATER</strong> only (frozen)</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Metal Spoon')">🔧 Metal Spoon</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from metal only')">Made from: <strong>METAL</strong> only</span></p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h4><span class="readable" onclick="speakText(this, 'Objects Made From MANY Materials')">Objects Made From MANY Materials</span></h4>
+                    
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Pencil')">✏️ Pencil</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from wood for the outside, graphite for the inside, rubber for the eraser, and metal for the band')">Made from: <strong>WOOD</strong> (outside) + <strong>GRAPHITE</strong> (inside) + <strong>RUBBER</strong> (eraser) + <strong>METAL</strong> (band)</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Running Shoe')">👟 Running Shoe</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from fabric for the top, rubber for the sole, plastic for the laces, and foam for the inside')">Made from: <strong>FABRIC</strong> (top) + <strong>RUBBER</strong> (sole) + <strong>PLASTIC</strong> (laces) + <strong>FOAM</strong> (inside)</span></p>
+                    </div>
+
+                    <div class="example-box">
+                        <h5><span class="readable" onclick="speakText(this, 'Door')">🚪 Door</span></h5>
+                        <p><span class="readable" onclick="speakText(this, 'Made from wood for the door itself, metal for the handle and hinges, and glass for the window')">Made from: <strong>WOOD</strong> (door itself) + <strong>METAL</strong> (handle and hinges) + <strong>GLASS</strong> (window)</span></p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h4><span class="readable" onclick="speakText(this, 'Why Use Different Materials?')">Why Use Different Materials?</span></h4>
+                    <p><span class="readable" onclick="speakText(this, 'Objects use different materials because each material is good at different things')">Objects use different materials because each material is good at different things:</span></p>
+                    <ul>
+                        <li><span class="readable" onclick="speakText(this, 'Metal is strong')"><strong>Metal</strong> is strong 💪</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Rubber is soft and bouncy')"><strong>Rubber</strong> is soft and bouncy ⚽</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Glass lets light through')"><strong>Glass</strong> lets light through ✨</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Wood is easy to shape')"><strong>Wood</strong> is easy to shape 🪵</span></li>
+                        <li><span class="readable" onclick="speakText(this, 'Fabric is comfortable')"><strong>Fabric</strong> is comfortable 👕</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'Activity: One or Many Materials?')">🎯 Activity: One or Many Materials?</span></h3>
+                <div class="activity-container">
+                    <h4 class="activity-title"><span class="readable" onclick="speakText(this, 'Sort objects by how many materials they use!')">Sort objects by how many materials they use!</span></h4>
+                    <p class="drag-instructions"><span class="readable" onclick="speakText(this, 'Drag each object to One Material or Many Materials')">Drag each object to "One Material" or "Many Materials"</span></p>
+
+                    <div class="drag-items" id="unit3-items">
+                        <div class="drag-item" draggable="true" data-category="one">🧊 Ice Cube</div>
+                        <div class="drag-item" draggable="true" data-category="many">✏️ Pencil</div>
+                        <div class="drag-item" draggable="true" data-category="one">🪵 Wooden Stick</div>
+                        <div class="drag-item" draggable="true" data-category="many">👟 Shoe</div>
+                        <div class="drag-item" draggable="true" data-category="one">📄 Paper</div>
+                        <div class="drag-item" draggable="true" data-category="many">🚪 Door</div>
+                    </div>
+
+                    <div class="drop-zones">
+                        <div class="drop-zone" data-zone="one"><h5>1️⃣ One Material</h5></div>
+                        <div class="drop-zone" data-zone="many"><h5>🔢 Many Materials</h5></div>
+                    </div>
+
+                    <button class="check-btn" onclick="checkActivity('unit3')">Check Answers!</button>
+                    <div class="feedback" id="unit3-feedback"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><span class="readable" onclick="speakText(this, 'Quiz Time!')">📝 Quiz Time!</span></h3>
+                <div class="quiz-container" id="unit3-quiz">
+                    <div class="question" data-answer="1">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 1: What is an object?')">1. What is an object?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'A: Only things made of wood')"><span class="readable">A) Only things made of wood</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'B: Things made of materials')"><span class="readable">B) Things made of materials</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'C: Only living things')"><span class="readable">C) Only living things</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="0">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 2: A wooden spoon is made from how many materials?')">2. A wooden spoon is made from:</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'A: One material')"><span class="readable">A) One material</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'B: Many materials')"><span class="readable">B) Many materials</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'C: No materials')"><span class="readable">C) No materials</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="1">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 3: A pencil is made from what?')">3. A pencil is made from:</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'A: Only wood')"><span class="readable">A) Only wood</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'B: Wood, graphite, rubber, and metal')"><span class="readable">B) Wood, graphite, rubber, and metal</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'C: Only graphite')"><span class="readable">C) Only graphite</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="2">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 4: Why do objects use different materials?')">4. Why use different materials?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'A: To look pretty')"><span class="readable">A) To look pretty</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'B: Because we ran out')"><span class="readable">B) Because we ran out</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'C: Each is good at different things')"><span class="readable">C) Each is good at different things</span></div>
+                        </div>
+                    </div>
+                    <div class="question" data-answer="0">
+                        <h4><span class="readable" onclick="speakText(this, 'Question 5: Which is made from one material?')">5. Which is made from one material?</span></h4>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'A: A metal spoon')"><span class="readable">A) A metal spoon</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'B: A shoe')"><span class="readable">B) A shoe</span></div>
+                            <div class="option" onclick="selectOption(this, 'unit3'); speakText(this, 'C: A door')"><span class="readable">C) A door</span></div>
+                        </div>
+                    </div>
+                    <button class="submit-quiz-btn" onclick="submitQuiz('unit3')">Submit Quiz</button>
+                    <div class="quiz-results" id="unit3-results"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- UNIT 4: D2.2 -->
         <div id="unit4" class="unit">
             <div class="unit-header">
